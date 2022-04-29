@@ -20,12 +20,8 @@ namespace TravelClient.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+        var allDestinations = Destination.GetDestinations();
+        return View(allDestinations);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
