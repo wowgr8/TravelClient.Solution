@@ -1,8 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<h1>All Destinations:</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<ol>
+@foreach (Destination destinaion in Model)
+{
+    <ul>
+        <li>ID: @destinaion.DestinationId</li>
+        <li>Name: @destinaion.City</li>
+        <li>Species: @destinaion.Country</li>
+        <li>Age: @destinaion.Rating</li>
+    </ul>
+    <a href="/Destinations/Details/@(destinaion.DestinationId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
