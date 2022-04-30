@@ -9,11 +9,11 @@ using TravelClient.Models;
 
 namespace TravelClient.Controllers
 {
-    public class HomeController : Controller
+    public class DestinationsController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<DestinationsController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public DestinationsController(ILogger<DestinationsController> logger)
         {
             _logger = logger;
         }
