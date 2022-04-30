@@ -11,17 +11,10 @@ namespace TravelClient.Controllers
 {
     public class DestinationsController : Controller
     {
-        private readonly ILogger<DestinationsController> _logger;
-
-        public DestinationsController(ILogger<DestinationsController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
-        var allDestinations = Destination.GetDestinations();
-        return View(allDestinations);
+            var allDestinations = Destination.GetDestinations();
+            return View(allDestinations);
         }
     }
 }
